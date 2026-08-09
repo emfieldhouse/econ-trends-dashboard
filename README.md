@@ -4,6 +4,9 @@ Analyze and visualize U.S. macroeconomic indicators — GDP, unemployment,
 inflation (CPI), and interest rates — using data from the Federal Reserve
 Economic Data (FRED) API.
 
+![Inflation vs Fed Funds Rate](docs/inflation_vs_fedfunds.png)
+![Correlation Matrix](docs/correlation_matrix.png)
+
 ## What this project shows
 
 - Pulling and cleaning real time-series data from a public API
