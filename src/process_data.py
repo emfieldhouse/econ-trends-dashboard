@@ -45,8 +45,10 @@ def main():
     merged = pd.concat(resampled, axis=1).dropna(how="all")
 
     # Derived metrics
-    merged["gdp_yoy_pct"] = merged["gdp"].pct_change(12) * 100
-    merged["cpi_yoy_pct"] = merged["cpi"].pct_change(12) * 100  # headline inflation
+    merged["gdp_yoy_pct"] = merged["gdp"].pct_change(12, fill_method=None) * 100
+    merged["cpi_yoy_pct"] = (
+        merged["cpi"].pct_change(12, fill_method=None) * 100
+    )  # headline inflation
     merged["unemployment_rate_3m_avg"] = (
         merged["unemployment_rate"].rolling(3).mean()
     )
